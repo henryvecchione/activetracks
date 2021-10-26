@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <title>ActiveTracks</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="/">ActiveTracks</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/about">About</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                <h5 class="card-text">Strava connected. </h5>
+                <p class="card-text">Your last workout was "{{lastActivity}}"</p>
+                <p class="card-text">Congrats, ActiveTracks is now set up.</p>                    
+                {% if noData %}
+                <p class="card-text"><em>Unfortunately, due to Spotify API limitations, we can't pull the songs you listened to during that one. But next time you upload an activity, the music you listened to will be there in the description</em></p>  
+                {% else %}
+                <p class="card-text"><em>We found the songs you listened to! Edit the title of the activity to put them in the description (adding a period or a space will do).</em></p>
+                {% endif %}                    
+                <a href="/" class="btn btn-primary btn-block">Thanks!</a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>     
+    </body>
+</html>

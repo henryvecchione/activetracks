@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <title>ActiveTracks</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="/">ActiveTracks</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/about">About</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h4 class="card-title">About</h5>
+                    
+                    <p class="card-text">ActiveTracks was developed by me, Henry Vecchione, a Strava fiend, computer science student, and lightweight rower at Princeton University. I love training and listening to music when I'm training, so I made this app to combine those two loves. Please email me with bugs or feedback at hjv(at)princeton(dot)edu. And, obviously, <a href="https://www.strava.com/athletes/5456287">follow me on Strava.</a></p>
+                    <h4 >FAQ</h5>
+                    <h5>Why can't I get the songs during old activities?</h5>
+                    <p class="card-text">The Spotify API limits the number of recently played songs it can return to 50, so ActiveTracks only works on activities within that 50-song window. Nothing I can do about this one for the time being.</p>
+                    
+                    <h5>Why don't some songs show up?</h5>
+                    <p class="card-text">Again, direct your attention to the Spotify API, which only counts songs as "recently played" if they are played to completion. And again, nothing I can do.</p>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>     
+    </body>
+</html>

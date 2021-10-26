@@ -1,0 +1,9 @@
+constants.py
+getToken.py
+get-pip.py
+stravaInterface.py
+spotiifyInterface.py
+*.txt
+!requirements.txt
+!runtime.txt
+ngrok
