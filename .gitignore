@@ -7,3 +7,4 @@ spotiifyInterface.py
 !requirements.txt
 !runtime.txt
 ngrok
+strava-webhooks/*
